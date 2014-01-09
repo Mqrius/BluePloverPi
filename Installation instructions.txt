@@ -1,4 +1,4 @@
-I’m going to link to the tutorials I’m following, but you can ignore those, since I detail every step I take.
+Iï¿½m going to link to the tutorials Iï¿½m following, but you can ignore those, since I detail every step I take.
 Note: wherever I say "vim", you should probably use "nano".
 
 
@@ -22,10 +22,10 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 		Running Win32DiskImager
 		Fill in path to raspbian image by hand
 		Write
-			File doesn’t exist
+			File doesnï¿½t exist
 		Correct drive letter to lowercase
 		Write
-			Yes, I’m sure I want to continue
+			Yes, Iï¿½m sure I want to continue
 			This is gonna take a while, so flip a coin to pick one of these links for distraction:
 				www.lesswrong.org
 				www.mrmoneymoustache.org
@@ -53,7 +53,7 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 			English (US) - English (US, Colemak)
 			Default alt-gr
 			No compose key
-			Don’t use ctrl+alt+backspace to terminate x-server
+			Donï¿½t use ctrl+alt+backspace to terminate x-server
 		Change user password
 			Do this AFTER setting keyboard, or you may be typing other characters than you thought.
 		Advanced options
@@ -71,10 +71,11 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 				success
 			Stop ignoring things now.
 		apt-get update
-			Note: I’m not going to do apt-get upgrade after this, because that takes ages. Screw that.
+			Note: Iï¿½m not going to do apt-get upgrade after this, because that takes ages. Screw that.
+				[Edit: I later noticed that it doesn't actually take ages. So you might as well do an apt-get upgrade after this]
 		apt-get install vim python-gobject bluez bluez-tools bluez-firmware python-bluez python-dev python-pip bluez-utils bluez-compat bluetooth
-			Note: I install more packages than the tutorial says here. Otherwise it didn’t seem to work for me.
-				I’m installing bluez-utils, bluez-compat, and bluetooth. And vim, because I prefer vim over nano.
+			Note: I install more packages than the tutorial says here. Otherwise it didnï¿½t seem to work for me.
+				Iï¿½m installing bluez-utils, bluez-compat, and bluetooth. And vim, because I prefer vim over nano.
 				Got inspiration from http://blog.kugelfish.com/2012/10/look-ma-no-wires-raspberry-pi-bluetooth.html
 			It says it will take 167 MB
 			Yes
@@ -83,16 +84,16 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 				www.mrmoneymoustache.org
 		pip install evdev
 		vim /etc/bluetooth/main.conf
-			Change line “#DisablePlugins = network,input”
-			To "DisablePlugins = network,input,audio,pnat,sap,serial”
+			Change line ï¿½#DisablePlugins = network,inputï¿½
+			To "DisablePlugins = network,input,audio,pnat,sap,serialï¿½
 		/etc/init.d/bluetooth restart
 		sdptool browse local
-			Doesn’t show anything now besides “Browsing FF:FF:FF:00:00:00 …”, as it should.
+			Doesnï¿½t show anything now besides ï¿½Browsing FF:FF:FF:00:00:00 ï¿½ï¿½, as it should.
 		exit
 	git clone https://github.com/Mqrius/BluePloverPi
 	cd BluePloverPi
 	sudo ./PiTooth.py
-		Getting a bunch of timeouts, see if it still works though…
+		Getting a bunch of timeouts, see if it still works thoughï¿½
 		Leave this running for now
 	Alt+F2
 		This goes to a second terminal screen
@@ -100,7 +101,7 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 	sudo hciconfig hci0 piscan
 		Makes pi visible to scans
 		Also timeout. Huh.
-	Let’s try random stuff then.
+	Letï¿½s try random stuff then.
 		hcitool scan
 			No results.
 		Make android visible
@@ -109,11 +110,11 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 				Maybe it just needed some time to get the Bluetooth up and running?
 		sudo hciconfig hci0 piscan
 			Oh this works now!
-			Let’s restart the PiTooth thing too then
+			Letï¿½s restart the PiTooth thing too then
 		Alt+F1
 		Ctrl+C
 		sudo ./PiTooth.py
-			Lookin’ good
+			Lookinï¿½ good
 		Alt+F2
 		Back on track
 	sudo bluetooth-agent 000000
@@ -121,7 +122,7 @@ Following http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with
 		Scan with android
 		click Raspberry Pi
 		Confirm passkey
-		We’re now connected
+		Weï¿½re now connected
 	Alt+F1
 	On android, go to a text editor
 	On the RPi, hit some buttons
